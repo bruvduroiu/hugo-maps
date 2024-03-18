@@ -76,10 +76,6 @@ $newtile.Permalink -}} {{- end -}} {{- end -}} {{- end -}} {{- end -}} {{- end
 
       const p = new pmtiles.PMTiles(PMTILES_URL);
 
-      var style = {{- $mapstyle | jsonify | safeJS -}};
-
-      var finalStyle = Object.assign({}, style, {"sources": {"protomaps": {"type": "vector","url": PMTILES_URL}}});
-
       // this is so we share one instance across the JS code and the map renderer
       protocol.add(p);
       let map = new maplibregl.Map({
@@ -100,7 +96,7 @@ $newtile.Permalink -}} {{- end -}} {{- end -}} {{- end -}} {{- end -}} {{- end
               attributionControl: {{ $mapparams.attributionControl }},
               customAttribution: "{{ $mapparams.customAttribution }}",
               interactive: {{- $mapparams.interactive -}},
-              style: finalStyle,
+       style: {{- $mapstyle | jsonify | safeJS -}}
           });
 
           // add navigation control (the +/- zoom buttons)
