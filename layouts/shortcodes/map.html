@@ -84,7 +84,7 @@ $newtile.Permalink -}} {{- end -}} {{- end -}} {{- end -}} {{- end -}} {{- end
       protocol.add(p);
       let map = new maplibregl.Map({
               container: 'map-{{- $mapname -}}',
-       {{ if (and $mapparams.center_lng $mapparams.center_lat )-}}
+       {{- if (and $mapparams.center_lng $mapparams.center_lat ) -}}
        center: [{{- $mapparams.center_lng -}}, {{- $mapparams.center_lat -}}],
        {{- else -}}
               center:  {{- $mapparams.center -}},
