@@ -52,6 +52,8 @@ $newtile.Permalink -}} {{- end -}} {{- end -}} {{- end -}} {{- end -}} {{- end
   rel="stylesheet"
 />
 
+<script src="https://unpkg.com/pmtiles@3.0.5/dist/pmtiles.js"></script>
+
 <style type="text/css">
   #map-{{- $mapname -}} {
       width: {{- .Get "width" | default $mapparams.width -}};
@@ -66,6 +68,20 @@ $newtile.Permalink -}} {{- end -}} {{- end -}} {{- end -}} {{- end -}} {{- end
 <script type="text/javascript">
   // run once page loaded
   window.addEventListener("load", (event) => {
+      // add the PMTiles plugin to the maplibregl global.
+      let protocol = new pmtiles.Protocol();
+      maplibregl.addProtocol("pmtiles",protocol.tile);
+
+      let PMTILES_URL = {{- $tileurl -}};
+
+      const p = new pmtiles.PMTiles(PMTILES_URL);
+
+      var style = {{- $mapstyle | jsonify | safeJS -}};
+
+      var finalStyle = Object.assign({}, style, {"sources": {"pmtiles": {"url": "pmtiles://" + PMTILES_URL}}});
+
+      // this is so we share one instance across the JS code and the map renderer
+      protocol.add(p);
       let map = new maplibregl.Map({
               container: 'map-{{- $mapname -}}',
               center:  {{- $mapparams.center -}},
@@ -80,7 +96,7 @@ $newtile.Permalink -}} {{- end -}} {{- end -}} {{- end -}} {{- end -}} {{- end
               attributionControl: {{ $mapparams.attributionControl }},
               customAttribution: "{{ $mapparams.customAttribution }}",
               interactive: {{- $mapparams.interactive -}},
-              style: {{- $mapstyle | jsonify | safeJS -}},
+              style: finalStyle,
           });
 
           // add navigation control (the +/- zoom buttons)
@@ -106,4 +122,3 @@ $newtile.Permalink -}} {{- end -}} {{- end -}} {{- end -}} {{- end -}} {{- end
   })
 </script>
 {{- end -}}
-
