@@ -755,7 +755,7 @@
           "fill-outline-color": "rgba(0, 0, 0, 1)"
         },
         "source": "protomaps",
-        "source-layer": "building",
+        "source-layer": "buildings",
         "type": "fill"
       },
       {
@@ -786,7 +786,7 @@
           "fill-pattern": "hatch-t"
         },
         "source": "protomaps",
-        "source-layer": "building",
+        "source-layer": "buildings",
         "type": "fill"
       },
       {
