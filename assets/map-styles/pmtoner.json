@@ -109,11 +109,16 @@
         "type": "fill"
       },
       {
-        "filter": [
-          "==",
-          "class",
-          "wood"
-        ],
+            "filter": [
+                "any",
+                [
+                    "in",
+                    "pmap:kind",
+                    "wood",
+                    "nature_reserve",
+                    "forest"
+                ]
+            ],
         "id": "landcover_wood_pattern",
         "layout": {
           "visibility": "visible"
@@ -126,18 +131,24 @@
           "fill-pattern": "dots-t"
         },
         "source": "protomaps",
-        "source-layer": "landcover",
+        "source-layer": "natural",
         "type": "fill"
       },
       {
-        "filter": [
-          "all",
-          [
-            "==",
-            "class",
-            "cemetery"
-          ]
-        ],
+            "filter": [
+                "any",
+                [
+                    "in",
+                    "pmap:kind",
+                    "national_park",
+                    "park",
+                    "cemetery",
+                    "protected_area",
+                    "nature_reserve",
+                    "forest",
+                    "golf_course"
+                ]
+            ],
         "id": "landcover_cemetery_fill",
         "minzoom": 10,
         "paint": {
