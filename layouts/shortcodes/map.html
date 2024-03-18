@@ -72,7 +72,7 @@ $newtile.Permalink -}} {{- end -}} {{- end -}} {{- end -}} {{- end -}} {{- end
       let protocol = new pmtiles.Protocol();
       maplibregl.addProtocol("pmtiles",protocol.tile);
 
-      let PMTILES_URL = {{- $sources.url -}};
+      let PMTILES_URL = {{- (dict "sources" $mapparams.sources).url -}};
 
       const p = new pmtiles.PMTiles(PMTILES_URL);
 
