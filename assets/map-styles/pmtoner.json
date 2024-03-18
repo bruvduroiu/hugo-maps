@@ -12,6 +12,7 @@
 	"type": "vector"
       }
     },
+    "glyphs": "https://protomaps.github.io/basemaps-assets/fonts/{fontstack}/{range}.pbf",
     "layers": [
       {
         "id": "background",
