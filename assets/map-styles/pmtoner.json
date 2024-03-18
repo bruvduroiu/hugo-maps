@@ -1,17 +1,6 @@
 {
     "version": 8,
-    "name": "PMToner",
-    "metadata": {
-      "mapbox:autocomposite": false,
-      "mapbox:type": "template",
-      "openmaptiles:mapbox:owner": "protomaps",
-      "openmaptiles:version": "3.x"
-    },
-    "sources": {
-      "protomaps": {
-	"type": "vector"
-      }
-    },
+    "name": "Toner",
     "glyphs": "https://protomaps.github.io/basemaps-assets/fonts/{fontstack}/{range}.pbf",
     "layers": [
       {
@@ -50,7 +39,7 @@
           "fill-outline-color": "rgba(0, 0, 0, 0)"
         },
         "source": "protomaps",
-        "source-layer": "landuse",
+        "source-layer": "landcover",
         "type": "fill"
       },
       {
@@ -82,7 +71,7 @@
           "fill-pattern": "dash-t"
         },
         "source": "protomaps",
-        "source-layer": "landuse",
+        "source-layer": "landcover",
         "type": "fill"
       },
       {
@@ -102,7 +91,7 @@
           "fill-opacity": 1
         },
         "source": "protomaps",
-        "source-layer": "landuse",
+        "source-layer": "landcover",
         "type": "fill"
       },
       {
@@ -123,7 +112,7 @@
           "fill-pattern": "dots-t"
         },
         "source": "protomaps",
-        "source-layer": "landuse",
+        "source-layer": "landcover",
         "type": "fill"
       },
       {
@@ -233,7 +222,7 @@
         "id": "waterway",
         "minzoom": 12,
         "source": "protomaps",
-        "source-layer": "water",
+        "source-layer": "waterway",
         "type": "line"
       },
       {
@@ -277,7 +266,7 @@
           }
         },
         "source": "protomaps",
-        "source-layer": "transit",
+        "source-layer": "transportation",
         "type": "line"
       },
       {
@@ -328,7 +317,7 @@
           }
         },
         "source": "protomaps",
-        "source-layer": "transit",
+        "source-layer": "transportation",
         "type": "line"
       },
       {
@@ -356,7 +345,7 @@
           "fill-opacity": 1
         },
         "source": "protomaps",
-        "source-layer": "roads",
+        "source-layer": "transportation",
         "type": "fill"
       },
       {
@@ -384,7 +373,7 @@
           "fill-opacity": 1
         },
         "source": "protomaps",
-        "source-layer": "roads",
+        "source-layer": "transportation",
         "type": "fill"
       },
       {
@@ -425,7 +414,7 @@
           }
         },
         "source": "protomaps",
-        "source-layer": "roads",
+        "source-layer": "transportation",
         "type": "line"
       },
       {
@@ -466,7 +455,7 @@
           }
         },
         "source": "protomaps",
-        "source-layer": "roads",
+        "source-layer": "transportation",
         "type": "line"
       },
       {
@@ -537,7 +526,7 @@
           }
         },
         "source": "protomaps",
-        "source-layer": "roads",
+        "source-layer": "transportation",
         "type": "line"
       },
       {
@@ -604,7 +593,7 @@
           }
         },
         "source": "protomaps",
-        "source-layer": "roads",
+        "source-layer": "transportation",
         "type": "line"
       },
       {
@@ -669,7 +658,7 @@
           }
         },
         "source": "protomaps",
-        "source-layer": "roads",
+        "source-layer": "transportation",
         "type": "line"
       },
       {
@@ -738,7 +727,7 @@
           }
         },
         "source": "protomaps",
-        "source-layer": "roads",
+        "source-layer": "transportation",
         "type": "line"
       },
       {
@@ -769,7 +758,7 @@
           "fill-outline-color": "rgba(0, 0, 0, 1)"
         },
         "source": "protomaps",
-        "source-layer": "buildings",
+        "source-layer": "building",
         "type": "fill"
       },
       {
@@ -800,15 +789,18 @@
           "fill-pattern": "hatch-t"
         },
         "source": "protomaps",
-        "source-layer": "buildings",
+        "source-layer": "building",
         "type": "fill"
       },
       {
-            "filter": [
-                "<=",
-                "pmap:min_admin_level",
-                2
-            ],
+        "filter": [
+          "all",
+          [
+            "==",
+            "admin_level",
+            4
+          ]
+        ],
         "id": "boundary_state",
         "layout": {
           "line-cap": "round",
@@ -875,7 +867,7 @@
           }
         },
         "source": "protomaps",
-        "source-layer": "boundaries",
+        "source-layer": "boundary",
         "type": "line"
       },
       {
@@ -912,7 +904,7 @@
           }
         },
         "source": "protomaps",
-        "source-layer": "country",
+        "source-layer": "boundary",
         "type": "line"
       },
       {
@@ -958,7 +950,7 @@
           }
         },
         "source": "protomaps",
-        "source-layer": "country",
+        "source-layer": "boundary",
         "type": "line"
       },
       {
@@ -993,7 +985,7 @@
           "text-color": "rgba(255, 255, 255, 1)"
         },
         "source": "protomaps",
-        "source-layer": "lake",
+        "source-layer": "water_name",
         "type": "symbol"
       },
       {
@@ -1038,24 +1030,24 @@
           "text-color": "rgba(255, 255, 255, 1)"
         },
         "source": "protomaps",
-        "source-layer": "water",
+        "source-layer": "waterway",
         "type": "symbol"
       },
       {
-            "filter": [
-                "any",
-                [
-                    "in",
-                    "pmap:kind",
-                    "sea",
-                    "ocean",
-                    "lake",
-                    "water",
-                    "bay",
-                    "strait",
-                    "fjord"
-                ]
-            ],
+        "filter": [
+          "all",
+          [
+            "==",
+            "$type",
+            "Point"
+          ],
+          [
+            "!in",
+            "class",
+            "ocean",
+            "lake"
+          ]
+        ],
         "id": "water_name_sea",
         "layout": {
           "symbol-placement": "point",
@@ -1075,7 +1067,7 @@
           "text-color": "rgba(255, 255, 255, 1)"
         },
         "source": "protomaps",
-        "source-layer": "physical_point",
+        "source-layer": "water_name",
         "type": "symbol"
       },
       {
@@ -1111,7 +1103,7 @@
           "text-color": "rgba(255, 255, 255, 1)"
         },
         "source": "protomaps",
-        "source-layer": "ocean",
+        "source-layer": "water_name",
         "type": "symbol"
       },
       {
@@ -1168,7 +1160,7 @@
           "text-halo-width": 3
         },
         "source": "protomaps",
-        "source-layer": "roads",
+        "source-layer": "transportation_name",
         "type": "symbol"
       },
       {
@@ -1230,7 +1222,7 @@
           "text-halo-width": 3
         },
         "source": "protomaps",
-        "source-layer": "transit",
+        "source-layer": "transportation_name",
         "type": "symbol"
       },
       {
@@ -1257,7 +1249,7 @@
           "text-halo-width": 2
         },
         "source": "protomaps",
-        "source-layer": "landuse",
+        "source-layer": "park",
         "type": "symbol"
       },
       {
@@ -1318,7 +1310,7 @@
           "text-halo-width": 2
         },
         "source": "protomaps",
-        "source-layer": "places",
+        "source-layer": "place",
         "type": "symbol"
       },
       {
@@ -1391,7 +1383,7 @@
           "text-halo-width": 2
         },
         "source": "protomaps",
-        "source-layer": "places",
+        "source-layer": "place",
         "type": "symbol"
       },
       {
@@ -1456,7 +1448,7 @@
           "text-halo-width": 2
         },
         "source": "protomaps",
-        "source-layer": "places",
+        "source-layer": "place",
         "type": "symbol"
       },
       {
@@ -1487,7 +1479,7 @@
           "text-color": "rgba(0, 0, 0, 1)"
         },
         "source": "protomaps",
-        "source-layer": "places",
+        "source-layer": "place",
         "type": "symbol"
       },
       {
@@ -1546,7 +1538,7 @@
           "text-halo-width": 2
         },
         "source": "protomaps",
-        "source-layer": "places",
+        "source-layer": "place",
         "type": "symbol"
       },
       {
@@ -1585,9 +1577,10 @@
           "text-halo-width": 2
         },
         "source": "protomaps",
-        "source-layer": "places",
+        "source-layer": "place",
         "type": "symbol"
       }
     ],
-    "sprite": "https://openmaptiles.github.io/maptiler-toner-gl-style/sprite"
+    "sprite": "https://openmaptiles.github.io/maptiler-toner-gl-style/sprite",
+    "id": "c4268e48-fac9-4478-8120-201224fbd4d8"
   }
