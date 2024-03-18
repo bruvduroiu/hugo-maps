@@ -972,18 +972,15 @@
         "type": "symbol"
       },
       {
-        "filter": [
-          "all",
-          [
-            "==",
-            "$type",
-            "LineString"
-          ],
-          [
-            "has",
-            "name"
-          ]
-        ],
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "pmap:kind",
+                    "river",
+                    "stream"
+                ]
+            ],
         "id": "water_name_way",
         "layout": {
           "symbol-placement": "line",
@@ -1013,24 +1010,24 @@
           "text-color": "rgba(255, 255, 255, 1)"
         },
         "source": "protomaps",
-        "source-layer": "waterway",
+        "source-layer": "physical_line",
         "type": "symbol"
       },
       {
-        "filter": [
-          "all",
-          [
-            "==",
-            "$type",
-            "Point"
-          ],
-          [
-            "!in",
-            "class",
-            "ocean",
-            "lake"
-          ]
-        ],
+            "filter": [
+                "any",
+                [
+                    "in",
+                    "pmap:kind",
+                    "sea",
+                    "ocean",
+                    "lake",
+                    "water",
+                    "bay",
+                    "strait",
+                    "fjord"
+                ]
+            ],
         "id": "water_name_sea",
         "layout": {
           "symbol-placement": "point",
@@ -1050,23 +1047,24 @@
           "text-color": "rgba(255, 255, 255, 1)"
         },
         "source": "protomaps",
-        "source-layer": "water_name",
+        "source-layer": "physical_point",
         "type": "symbol"
       },
       {
-        "filter": [
-          "all",
-          [
-            "==",
-            "$type",
-            "Point"
-          ],
-          [
-            "==",
-            "class",
-            "ocean"
-          ]
-        ],
+            "filter": [
+                "any",
+                [
+                    "in",
+                    "pmap:kind",
+                    "sea",
+                    "ocean",
+                    "lake",
+                    "water",
+                    "bay",
+                    "strait",
+                    "fjord"
+                ]
+            ],
         "id": "water_name_ocean",
         "layout": {
           "symbol-placement": "point",
@@ -1086,7 +1084,7 @@
           "text-color": "rgba(255, 255, 255, 1)"
         },
         "source": "protomaps",
-        "source-layer": "water_name",
+        "source-layer": "physical_point",
         "type": "symbol"
       },
       {
@@ -1206,9 +1204,20 @@
         "type": "symbol"
       },
       {
-        "filter": [
-          "all"
-        ],
+            "filter": [
+                "any",
+                [
+                    "in",
+                    "pmap:kind",
+                    "national_park",
+                    "park",
+                    "cemetery",
+                    "protected_area",
+                    "nature_reserve",
+                    "forest",
+                    "golf_course"
+                ]
+            ],
         "id": "place_label_park",
         "layout": {
           "symbol-placement": "point",
@@ -1229,7 +1238,7 @@
           "text-halo-width": 2
         },
         "source": "protomaps",
-        "source-layer": "park",
+        "source-layer": "landuse",
         "type": "symbol"
       },
       {
