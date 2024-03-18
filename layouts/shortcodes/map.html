@@ -113,7 +113,7 @@ $newtile.Permalink -}} {{- end -}} {{- end -}} {{- end -}} {{- end -}} {{- end
    {{ if $mapparams.marker }}
               new maplibregl.Marker()
     .setLngLat([{{- $mapparams.marker_lng -}}, {{- $mapparams.marker_lat -}}])
-                  .setPopup(new maplibregl.Popup().setHTML("{{- .marker -}}"))
+                  .setPopup(new maplibregl.Popup().setHTML("{{- $mapparams.marker -}}"))
                   .addTo(map);
    {{- else -}}
           {{ range $mapparams.markers -}}
