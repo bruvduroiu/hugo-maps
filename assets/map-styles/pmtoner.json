@@ -1,7 +1,6 @@
 {
     "version": 8,
     "name": "Toner",
-    "glyphs": "https://protomaps.github.io/basemaps-assets/fonts/{fontstack}/{range}.pbf",
     "layers": [
       {
         "id": "background",
@@ -955,7 +954,7 @@
           "symbol-spacing": 350,
           "text-field": "{name:latin} {name:nonlatin}",
           "text-font": [
-            "Noto Sans Italic"
+            "KlokanTech Noto Sans Italic"
           ],
           "text-letter-spacing": 0.2,
           "text-max-width": 5,
@@ -987,7 +986,7 @@
           "symbol-spacing": 200,
           "text-field": "{name:latin} {name:nonlatin}",
           "text-font": [
-            "Noto Sans Italic"
+            "KlokanTech Noto Sans Italic"
           ],
           "text-max-width": 9,
           "text-rotation-alignment": "map",
@@ -1034,7 +1033,7 @@
           "symbol-spacing": 250,
           "text-field": "{name:latin} {name:nonlatin}",
           "text-font": [
-            "Noto Sans Italic"
+            "KlokanTech Noto Sans Italic"
           ],
           "text-letter-spacing": 0.1,
           "text-max-width": 6,
@@ -1071,7 +1070,7 @@
           "symbol-spacing": 350,
           "text-field": "{name:latin} {name:nonlatin}",
           "text-font": [
-            "Noto Sans Italic"
+            "KlokanTech Noto Sans Italic"
           ],
           "text-letter-spacing": 0.2,
           "text-max-width": 5,
@@ -1107,13 +1106,13 @@
               [
                 6,
                 [
-                  "Noto Sans Regular"
+                  "KlokanTech Noto Sans Regular"
                 ]
               ],
               [
                 16,
                 [
-                  "Noto Sans Bold"
+                  "KlokanTech Noto Sans Bold"
                 ]
               ]
             ]
@@ -1166,13 +1165,13 @@
               [
                 6,
                 [
-                  "Noto Sans Regular"
+                  "KlokanTech Noto Sans Regular"
                 ]
               ],
               [
                 16,
                 [
-                  "Noto Sans Bold"
+                  "KlokanTech Noto Sans Bold"
                 ]
               ]
             ]
@@ -1223,7 +1222,7 @@
           "symbol-placement": "point",
           "text-field": "{name:latin}",
           "text-font": [
-            "Noto Sans Italic"
+            "KlokanTech Noto Sans Italic"
           ],
           "text-line-height": 1,
           "text-pitch-alignment": "map",
@@ -1256,13 +1255,13 @@
               [
                 12,
                 [
-                  "Noto Sans Regular"
+                  "KlokanTech Noto Sans Regular"
                 ]
               ],
               [
                 16,
                 [
-                  "Noto Sans Regular"
+                  "KlokanTech Noto Sans Regular"
                 ]
               ]
             ]
@@ -1308,13 +1307,13 @@
               [
                 4,
                 [
-                  "Noto Sans Regular"
+                  "KlokanTech Noto Sans Regular"
                 ]
               ],
               [
                 7,
                 [
-                  "Noto Sans Bold"
+                  "KlokanTech Noto Sans Bold"
                 ]
               ]
             ]
@@ -1373,13 +1372,13 @@
               [
                 8,
                 [
-                  "Noto Sans Regular"
+                  "KlokanTech Noto Sans Regular"
                 ]
               ],
               [
                 14,
                 [
-                  "Noto Sans Bold"
+                  "KlokanTech Noto Sans Bold"
                 ]
               ]
             ]
@@ -1425,7 +1424,7 @@
         "layout": {
           "text-field": "{name:latin} {name:nonlatin}",
           "text-font": [
-            "Noto Sans Regular"
+            "KlokanTech Noto Sans Regular"
           ],
           "text-max-width": 10,
           "text-size": 13,
@@ -1458,13 +1457,13 @@
               [
                 3,
                 [
-                  "Noto Sans Regular"
+                  "KlokanTech Noto Sans Regular"
                 ]
               ],
               [
                 4,
                 [
-                  "Noto Sans Bold"
+                  "KlokanTech Noto Sans Bold"
                 ]
               ]
             ]
@@ -1512,7 +1511,7 @@
         "layout": {
           "text-field": "{name:latin}",
           "text-font": [
-            "Noto Sans Extra Bold"
+            "KlokanTech Noto Sans Extra Bold"
           ],
           "text-line-height": 1.1,
           "text-max-width": 10,

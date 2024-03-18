@@ -6,10 +6,23 @@ params:
   hugo-maps:
       default:
         sources: 
-           openmaptiles:
+          protomaps:
+            type: vector
+            url: https://api.protomaps.com/tiles/v3.json?key=c83705b2e6a15194
+          openmaptiles:
              type: vector
              url: https://api.maptiler.com/tiles/v3/tiles.json?key=143k20pEdcyOeBepEEnR
-        height: 500px
+      taipei_map:
+        center: [121.53737811422849, 25.04960023576451]
+        zoom: 12
+        style: pmtoner
+        interactive: false
+        navigationControl: false
+        markers:
+          - location: [121.51742156251633, 25.03526209326245]
+            text: "Revolver"
+          - location: [121.52170849490979, 25.04960605291676]
+            text: "Grey Area"
       map_3d:
         style: maptiler-3d
         center: [-0.127758, 51.507351]
