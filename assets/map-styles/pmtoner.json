@@ -769,7 +769,7 @@
           "fill-outline-color": "rgba(0, 0, 0, 1)"
         },
         "source": "protomaps",
-        "source-layer": "building",
+        "source-layer": "buildings",
         "type": "fill"
       },
       {
@@ -800,18 +800,15 @@
           "fill-pattern": "hatch-t"
         },
         "source": "protomaps",
-        "source-layer": "building",
+        "source-layer": "buildings",
         "type": "fill"
       },
       {
-        "filter": [
-          "all",
-          [
-            "==",
-            "admin_level",
-            4
-          ]
-        ],
+            "filter": [
+                "<=",
+                "pmap:min_admin_level",
+                2
+            ],
         "id": "boundary_state",
         "layout": {
           "line-cap": "round",
@@ -878,7 +875,7 @@
           }
         },
         "source": "protomaps",
-        "source-layer": "country",
+        "source-layer": "boundaries",
         "type": "line"
       },
       {
@@ -1045,20 +1042,20 @@
         "type": "symbol"
       },
       {
-        "filter": [
-          "all",
-          [
-            "==",
-            "$type",
-            "Point"
-          ],
-          [
-            "!in",
-            "class",
-            "ocean",
-            "lake"
-          ]
-        ],
+            "filter": [
+                "any",
+                [
+                    "in",
+                    "pmap:kind",
+                    "sea",
+                    "ocean",
+                    "lake",
+                    "water",
+                    "bay",
+                    "strait",
+                    "fjord"
+                ]
+            ],
         "id": "water_name_sea",
         "layout": {
           "symbol-placement": "point",
@@ -1078,7 +1075,7 @@
           "text-color": "rgba(255, 255, 255, 1)"
         },
         "source": "protomaps",
-        "source-layer": "ocean",
+        "source-layer": "physical_point",
         "type": "symbol"
       },
       {
