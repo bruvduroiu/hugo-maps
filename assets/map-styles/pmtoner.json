@@ -250,14 +250,14 @@
         "type": "line"
       },
       {
-        "filter": [
-          "all",
-          [
-            "==",
-            "class",
-            "rail"
-          ]
-        ],
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "pmap:kind",
+                    "rail"
+                ]
+            ],
         "id": "rail",
         "layout": {
           "visibility": "visible"
@@ -290,7 +290,7 @@
           }
         },
         "source": "protomaps",
-        "source-layer": "transportation",
+        "source-layer": "transit",
         "type": "line"
       },
       {
