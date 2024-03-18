@@ -1587,6 +1587,5 @@
         "type": "symbol"
       }
     ],
-    "glyphs": "https://protomaps.github.io/basemaps-assets/fonts/{fontstack}/{range}.pbf",
     "sprite": "https://openmaptiles.github.io/maptiler-toner-gl-style/sprite"
   }

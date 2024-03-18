@@ -3234,6 +3234,5 @@
                 "text-color": "#b8b8b8"
             }
         }
-    ],
-    "glyphs": "https://protomaps.github.io/basemaps-assets/fonts/{fontstack}/{range}.pbf"
+    ]
 }
