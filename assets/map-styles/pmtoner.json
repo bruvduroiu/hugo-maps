@@ -1098,14 +1098,16 @@
         "type": "symbol"
       },
       {
-        "filter": [
-          "in",
-          "class",
-          "primary",
-          "secondary",
-          "tertiary",
-          "trunk"
-        ],
+            "filter": [
+                "any",
+                [
+                    "in",
+                    "pmap:kind",
+                    "highway",
+                    "major_road",
+                    "medium_road"
+                ]
+            ],
         "id": "road_label_primary",
         "layout": {
           "symbol-placement": "line",
@@ -1151,25 +1153,20 @@
           "text-halo-width": 3
         },
         "source": "protomaps",
-        "source-layer": "transportation_name",
+        "source-layer": "roads",
         "type": "symbol"
       },
       {
-        "filter": [
-          "all",
-          [
-            "==",
-            "$type",
-            "LineString"
-          ],
-          [
-            "in",
-            "class",
-            "minor",
-            "service",
-            "track"
-          ]
-        ],
+            "filter": [
+                "any",
+                [
+                    "in",
+                    "pmap:kind",
+                    "minor_road",
+                    "other",
+                    "path"
+                ]
+            ],
         "id": "road_label_secondary",
         "layout": {
           "symbol-placement": "line",
@@ -1213,7 +1210,7 @@
           "text-halo-width": 3
         },
         "source": "protomaps",
-        "source-layer": "transportation_name",
+        "source-layer": "roads",
         "type": "symbol"
       },
       {
