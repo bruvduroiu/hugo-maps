@@ -11,11 +11,16 @@
         "type": "background"
       },
       {
-        "filter": [
-          "==",
-          "class",
-          "grass"
-        ],
+            "filter": [
+                "any",
+                [
+                    "in",
+                    "pmap:kind",
+                    "allotments",
+                    "village_green",
+                    "playground"
+                ]
+            ],
         "id": "landcover_grass_fill",
         "metadata": {
           "mapbox:group": "1444849388993.3071"
@@ -39,15 +44,24 @@
           "fill-outline-color": "rgba(0, 0, 0, 0)"
         },
         "source": "protomaps",
-        "source-layer": "landcover",
+        "source-layer": "landuse",
         "type": "fill"
       },
       {
-        "filter": [
-          "==",
-          "class",
-          "grass"
-        ],
+            "filter": [
+                "any",
+                [
+                    "in",
+                    "pmap:kind",
+                    "national_park",
+                    "park",
+                    "cemetery",
+                    "protected_area",
+                    "nature_reserve",
+                    "forest",
+                    "golf_course"
+                ]
+            ],
         "id": "landcover_grass_pattern",
         "metadata": {
           "mapbox:group": "1444849388993.3071"
@@ -71,7 +85,7 @@
           "fill-pattern": "dash-t"
         },
         "source": "protomaps",
-        "source-layer": "landcover",
+        "source-layer": "landuse",
         "type": "fill"
       },
       {
