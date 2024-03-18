@@ -88,11 +88,16 @@
         "type": "fill"
       },
       {
-        "filter": [
-          "==",
-          "class",
-          "wood"
-        ],
+            "filter": [
+                "any",
+                [
+                    "in",
+                    "pmap:kind",
+                    "wood",
+                    "nature_reserve",
+                    "forest"
+                ]
+            ],
         "id": "landcover_wood_fill",
         "layout": {
           "visibility": "visible"
@@ -104,7 +109,7 @@
           "fill-opacity": 1
         },
         "source": "protomaps",
-        "source-layer": "landcover",
+        "source-layer": "natural",
         "type": "fill"
       },
       {
@@ -229,18 +234,19 @@
         "type": "fill"
       },
       {
-        "filter": [
-          "all",
-          [
-            "!=",
-            "class",
-            "river"
-          ]
-        ],
+            "filter": [
+                "all",
+                [
+                    "in",
+                    "pmap:kind",
+                    "river",
+                    "stream"
+                ]
+            ],
         "id": "waterway",
         "minzoom": 12,
         "source": "protomaps",
-        "source-layer": "waterway",
+        "source-layer": "physical_line",
         "type": "line"
       },
       {
