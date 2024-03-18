@@ -107,7 +107,7 @@ $newtile.Permalink -}} {{- end -}} {{- end -}} {{- end -}} {{- end -}} {{- end
 
           // add markers if any
    {{ if $mapparams.marker }}
-              new maplibregl.Marker()
+   new maplibregl.Marker({color: "#be185d"})
     .setLngLat([{{- $mapparams.marker_lng -}}, {{- $mapparams.marker_lat -}}])
                   .setPopup(new maplibregl.Popup().setHTML("{{- $mapparams.marker -}}"))
                   .addTo(map);
