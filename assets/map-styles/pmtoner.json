@@ -55,7 +55,6 @@
                     "pmap:kind",
                     "national_park",
                     "park",
-                    "cemetery",
                     "protected_area",
                     "nature_reserve",
                     "forest",
@@ -140,13 +139,7 @@
                 [
                     "in",
                     "pmap:kind",
-                    "national_park",
-                    "park",
-                    "cemetery",
-                    "protected_area",
-                    "nature_reserve",
-                    "forest",
-                    "golf_course"
+                    "landcover_cemetery_fill"
                 ]
             ],
         "id": "landcover_cemetery_fill",
@@ -173,14 +166,14 @@
         "type": "fill"
       },
       {
-        "filter": [
-          "all",
-          [
-            "==",
-            "class",
-            "cemetery"
-          ]
-        ],
+            "filter": [
+                "any",
+                [
+                    "in",
+                    "pmap:kind",
+                    "cemetery"
+                ]
+            ],
         "id": "landcover_cemetery_pattern",
         "paint": {
           "fill-antialias": true,
