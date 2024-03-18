@@ -784,14 +784,11 @@
         "type": "fill"
       },
       {
-        "filter": [
-          "all",
-          [
-            "==",
-            "admin_level",
-            4
-          ]
-        ],
+            "filter": [
+                ">",
+                "pmap:min_admin_level",
+                2
+            ],
         "id": "boundary_state",
         "layout": {
           "line-cap": "round",
@@ -858,15 +855,15 @@
           }
         },
         "source": "protomaps",
-        "source-layer": "boundary",
+        "source-layer": "boundaries",
         "type": "line"
       },
       {
-        "filter": [
-          "==",
-          "admin_level",
-          2
-        ],
+            "filter": [
+                "<=",
+                "pmap:min_admin_level",
+                2
+            ],
         "id": "boundary_country_z5-",
         "layout": {
           "line-cap": "round",
@@ -895,22 +892,15 @@
           }
         },
         "source": "protomaps",
-        "source-layer": "boundary",
+        "source-layer": "boundaries",
         "type": "line"
       },
       {
-        "filter": [
-          "all",
-          [
-            "==",
-            "admin_level",
-            2
-          ],
-          [
-            "!has",
-            "claimed_by"
-          ]
-        ],
+            "filter": [
+                "<=",
+                "pmap:min_admin_level",
+                2
+            ],
         "id": "boundary_country_z0-4",
         "layout": {
           "line-cap": "round",
@@ -941,22 +931,24 @@
           }
         },
         "source": "protomaps",
-        "source-layer": "boundary",
+        "source-layer": "boundaries",
         "type": "line"
       },
       {
-        "filter": [
-          "all",
-          [
-            "==",
-            "$type",
-            "LineString"
-          ],
-          [
-            "has",
-            "name"
-          ]
-        ],
+            "filter": [
+                "any",
+                [
+                    "in",
+                    "pmap:kind",
+                    "sea",
+                    "ocean",
+                    "lake",
+                    "water",
+                    "bay",
+                    "strait",
+                    "fjord"
+                ]
+            ],
         "id": "water_name_lakeline",
         "layout": {
           "symbol-placement": "line",
@@ -976,7 +968,7 @@
           "text-color": "rgba(255, 255, 255, 1)"
         },
         "source": "protomaps",
-        "source-layer": "water_name",
+        "source-layer": "physical_point",
         "type": "symbol"
       },
       {
@@ -1145,7 +1137,7 @@
           },
           "visibility": "visible"
         },
-        "minzoom": 15,
+        "minzoom": 11,
         "paint": {
           "text-color": "rgba(0, 0, 0, 1)",
           "text-halo-blur": 0,
@@ -1203,7 +1195,7 @@
           },
           "visibility": "visible"
         },
-        "minzoom": 14.5,
+        "minzoom": 15,
         "paint": {
           "text-color": "rgba(0, 0, 0, 1)",
           "text-halo-color": "rgba(255, 255, 255, 1)",
