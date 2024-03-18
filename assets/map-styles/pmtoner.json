@@ -294,14 +294,14 @@
         "type": "line"
       },
       {
-        "filter": [
-          "all",
-          [
-            "==",
-            "class",
-            "rail"
-          ]
-        ],
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "pmap:kind",
+                    "rail"
+                ]
+            ],
         "id": "rail_hatch",
         "layout": {
           "visibility": "visible"
@@ -341,7 +341,7 @@
           }
         },
         "source": "protomaps",
-        "source-layer": "transportation",
+        "source-layer": "transit",
         "type": "line"
       },
       {
@@ -373,19 +373,14 @@
         "type": "fill"
       },
       {
-        "filter": [
-          "all",
-          [
-            "==",
-            "$type",
-            "Polygon"
-          ],
-          [
-            "==",
-            "class",
-            "pier"
-          ]
-        ],
+            "filter": [
+                "any",
+                [
+                    "==",
+                    "pmap:kind",
+                    "pier"
+                ]
+            ],
         "id": "road_area_pier",
         "layout": {
           "visibility": "visible"
@@ -397,23 +392,18 @@
           "fill-opacity": 1
         },
         "source": "protomaps",
-        "source-layer": "transportation",
+        "source-layer": "landuse",
         "type": "fill"
       },
       {
-        "filter": [
-          "all",
-          [
-            "==",
-            "$type",
-            "LineString"
-          ],
-          [
-            "in",
-            "class",
-            "pier"
-          ]
-        ],
+            "filter": [
+                "any",
+                [
+                    "==",
+                    "pmap:kind",
+                    "pier"
+                ]
+            ],
         "id": "road_pier",
         "layout": {
           "line-cap": "round",
@@ -438,23 +428,24 @@
           }
         },
         "source": "protomaps",
-        "source-layer": "transportation",
+        "source-layer": "transit",
         "type": "line"
       },
       {
-        "filter": [
-          "all",
-          [
-            "==",
-            "$type",
-            "LineString"
-          ],
-          [
-            "==",
-            "class",
-            "path"
-          ]
-        ],
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "pmap:level",
+                    0
+                ],
+                [
+                    "in",
+                    "pmap:kind",
+                    "other",
+                    "path"
+                ]
+            ],
         "id": "road_path",
         "layout": {
           "line-cap": "round",
@@ -479,34 +470,23 @@
           }
         },
         "source": "protomaps",
-        "source-layer": "transportation",
+        "source-layer": "roads",
         "type": "line"
       },
       {
-        "filter": [
-          "all",
-          [
-            "==",
-            "$type",
-            "LineString"
-          ],
-          [
-            "!in",
-            "class",
-            "pier",
-            "rail",
-            "path",
-            "primary"
-          ],
-          [
-            "in",
-            "class",
-            "secondary",
-            "tertiary",
-            "minor",
-            "service"
-          ]
-        ],
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "pmap:level",
+                    0
+                ],
+                [
+                    "==",
+                    "pmap:kind",
+                    "medium_road"
+                ]
+            ],
         "id": "road_secondary",
         "layout": {
           "line-cap": "round",
@@ -550,30 +530,23 @@
           }
         },
         "source": "protomaps",
-        "source-layer": "transportation",
+        "source-layer": "roads",
         "type": "line"
       },
       {
-        "filter": [
-          "all",
-          [
-            "==",
-            "$type",
-            "LineString"
-          ],
-          [
-            "!in",
-            "class",
-            "pier",
-            "rail",
-            "path"
-          ],
-          [
-            "==",
-            "class",
-            "primary"
-          ]
-        ],
+            "filter": [
+                "all",
+                [
+                    "==",
+                    "pmap:level",
+                    0
+                ],
+                [
+                    "==",
+                    "pmap:kind",
+                    "major_road"
+                ]
+            ],
         "id": "road_primary",
         "layout": {
           "line-cap": "round",
@@ -617,7 +590,7 @@
           }
         },
         "source": "protomaps",
-        "source-layer": "transportation",
+        "source-layer": "roads",
         "type": "line"
       },
       {
