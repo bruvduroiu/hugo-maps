@@ -4,14 +4,10 @@
     "metadata": {
       "mapbox:autocomposite": false,
       "mapbox:type": "template",
-      "openmaptiles:mapbox:owner": "protonmaps",
+      "openmaptiles:mapbox:owner": "protomaps",
       "openmaptiles:mapbox:source:url": "mapbox://openmaptiles.4qljc88t",
       "openmaptiles:version": "3.x"
     },
-    "center": [-122.41877447993727,37.7977350127602],
-    "zoom": 10.426085190067841,
-    "bearing": 0,
-    "pitch": 0,
     "layers": [
       {
         "id": "background",
@@ -48,21 +44,7 @@
           "fill-opacity": 1,
           "fill-outline-color": "rgba(0, 0, 0, 0)"
         },
-   "     filter": [
-	   "any",
-	   [
-                    "in",
-                    "pmap:kind",
-                    "national_park",
-                    "park",
-                    "cemetery",
-                    "protected_area",
-                    "nature_reserve",
-                    "forest",
-                    "golf_course"
-                ]
-            ],
-        "source": "protonmaps",
+        "source": "protomaps",
         "source-layer": "landuse",
         "type": "fill"
       },
@@ -94,7 +76,7 @@
           "fill-outline-color": "rgba(94, 94, 94, 0)",
           "fill-pattern": "dash-t"
         },
-        "source": "protonmaps",
+        "source": "protomaps",
         "source-layer": "landuse",
         "type": "fill"
       },
@@ -114,7 +96,7 @@
           "fill-color": "rgba(0, 0, 0, 1)",
           "fill-opacity": 1
         },
-        "source": "protonmaps",
+        "source": "protomaps",
         "source-layer": "landuse",
         "type": "fill"
       },
@@ -135,7 +117,7 @@
           "fill-opacity": 1,
           "fill-pattern": "dots-t"
         },
-        "source": "protonmaps",
+        "source": "protomaps",
         "source-layer": "landuse",
         "type": "fill"
       },
@@ -167,7 +149,7 @@
           },
           "fill-outline-color": "rgba(75, 75, 75, 1)"
         },
-        "source": "protonmaps",
+        "source": "protomaps",
         "source-layer": "landuse",
         "type": "fill"
       },
@@ -199,7 +181,7 @@
           "fill-outline-color": "rgba(75, 75, 75, 0)",
           "fill-pattern": "cross-t"
         },
-        "source": "protonmaps",
+        "source": "protomaps",
         "source-layer": "landuse",
         "type": "fill"
       },
@@ -230,7 +212,7 @@
           "fill-antialias": true,
           "fill-color": "rgba(0, 0, 0, 1)"
         },
-        "source": "protonmaps",
+        "source": "protomaps",
         "source-layer": "water",
         "type": "fill"
       },
@@ -245,7 +227,7 @@
         ],
         "id": "waterway",
         "minzoom": 12,
-        "source": "protonmaps",
+        "source": "protomaps",
         "source-layer": "water",
         "type": "line"
       },
@@ -289,7 +271,7 @@
             ]
           }
         },
-        "source": "protonmaps",
+        "source": "protomaps",
         "source-layer": "transit",
         "type": "line"
       },
@@ -340,7 +322,7 @@
             ]
           }
         },
-        "source": "protonmaps",
+        "source": "protomaps",
         "source-layer": "transit",
         "type": "line"
       },
@@ -368,7 +350,7 @@
           "fill-color": "rgba(255, 255, 255, 1)",
           "fill-opacity": 1
         },
-        "source": "protonmaps",
+        "source": "protomaps",
         "source-layer": "roads",
         "type": "fill"
       },
@@ -396,7 +378,7 @@
           "fill-color": "rgba(255, 255, 255, 1)",
           "fill-opacity": 1
         },
-        "source": "protonmaps",
+        "source": "protomaps",
         "source-layer": "roads",
         "type": "fill"
       },
@@ -437,7 +419,7 @@
             ]
           }
         },
-        "source": "protonmaps",
+        "source": "protomaps",
         "source-layer": "roads",
         "type": "line"
       },
@@ -478,7 +460,7 @@
             ]
           }
         },
-        "source": "protonmaps",
+        "source": "protomaps",
         "source-layer": "roads",
         "type": "line"
       },
@@ -549,7 +531,7 @@
             ]
           }
         },
-        "source": "protonmaps",
+        "source": "protomaps",
         "source-layer": "roads",
         "type": "line"
       },
@@ -616,7 +598,7 @@
             ]
           }
         },
-        "source": "protonmaps",
+        "source": "protomaps",
         "source-layer": "roads",
         "type": "line"
       },
@@ -681,7 +663,7 @@
             ]
           }
         },
-        "source": "protonmaps",
+        "source": "protomaps",
         "source-layer": "roads",
         "type": "line"
       },
@@ -750,7 +732,7 @@
             ]
           }
         },
-        "source": "protonmaps",
+        "source": "protomaps",
         "source-layer": "roads",
         "type": "line"
       },
@@ -781,7 +763,7 @@
           },
           "fill-outline-color": "rgba(0, 0, 0, 1)"
         },
-        "source": "protonmaps",
+        "source": "protomaps",
         "source-layer": "building",
         "type": "fill"
       },
@@ -812,7 +794,7 @@
           "fill-outline-color": "rgba(0, 0, 0, 1)",
           "fill-pattern": "hatch-t"
         },
-        "source": "protonmaps",
+        "source": "protomaps",
         "source-layer": "building",
         "type": "fill"
       },
@@ -890,7 +872,7 @@
             ]
           }
         },
-        "source": "protonmaps",
+        "source": "protomaps",
         "source-layer": "country",
         "type": "line"
       },
@@ -927,7 +909,7 @@
             ]
           }
         },
-        "source": "protonmaps",
+        "source": "protomaps",
         "source-layer": "country",
         "type": "line"
       },
@@ -973,7 +955,7 @@
             ]
           }
         },
-        "source": "protonmaps",
+        "source": "protomaps",
         "source-layer": "country",
         "type": "line"
       },
@@ -1008,7 +990,7 @@
         "paint": {
           "text-color": "rgba(255, 255, 255, 1)"
         },
-        "source": "protonmaps",
+        "source": "protomaps",
         "source-layer": "lake",
         "type": "symbol"
       },
@@ -1053,7 +1035,7 @@
         "paint": {
           "text-color": "rgba(255, 255, 255, 1)"
         },
-        "source": "protonmaps",
+        "source": "protomaps",
         "source-layer": "water",
         "type": "symbol"
       },
@@ -1090,7 +1072,7 @@
         "paint": {
           "text-color": "rgba(255, 255, 255, 1)"
         },
-        "source": "protonmaps",
+        "source": "protomaps",
         "source-layer": "ocean",
         "type": "symbol"
       },
@@ -1126,7 +1108,7 @@
         "paint": {
           "text-color": "rgba(255, 255, 255, 1)"
         },
-        "source": "protonmaps",
+        "source": "protomaps",
         "source-layer": "ocean",
         "type": "symbol"
       },
@@ -1183,7 +1165,7 @@
           "text-halo-color": "rgba(255, 255, 255, 1)",
           "text-halo-width": 3
         },
-        "source": "protonmaps",
+        "source": "protomaps",
         "source-layer": "roads",
         "type": "symbol"
       },
@@ -1245,7 +1227,7 @@
           "text-halo-color": "rgba(255, 255, 255, 1)",
           "text-halo-width": 3
         },
-        "source": "protonmaps",
+        "source": "protomaps",
         "source-layer": "transit",
         "type": "symbol"
       },
@@ -1272,7 +1254,7 @@
           "text-halo-color": "rgba(255, 255, 255, 1)",
           "text-halo-width": 2
         },
-        "source": "protonmaps",
+        "source": "protomaps",
         "source-layer": "landuse",
         "type": "symbol"
       },
@@ -1333,7 +1315,7 @@
           "text-halo-color": "hsl(0, 0%, 100%)",
           "text-halo-width": 2
         },
-        "source": "protonmaps",
+        "source": "protomaps",
         "source-layer": "places",
         "type": "symbol"
       },
@@ -1406,7 +1388,7 @@
           "text-halo-color": "rgba(255, 255, 255, 1)",
           "text-halo-width": 2
         },
-        "source": "protonmaps",
+        "source": "protomaps",
         "source-layer": "places",
         "type": "symbol"
       },
@@ -1471,7 +1453,7 @@
           "text-halo-color": "rgba(255, 255, 255, 1)",
           "text-halo-width": 2
         },
-        "source": "protonmaps",
+        "source": "protomaps",
         "source-layer": "places",
         "type": "symbol"
       },
@@ -1502,7 +1484,7 @@
         "paint": {
           "text-color": "rgba(0, 0, 0, 1)"
         },
-        "source": "protonmaps",
+        "source": "protomaps",
         "source-layer": "places",
         "type": "symbol"
       },
@@ -1561,7 +1543,7 @@
           "text-halo-color": "#fff",
           "text-halo-width": 2
         },
-        "source": "protonmaps",
+        "source": "protomaps",
         "source-layer": "places",
         "type": "symbol"
       },
@@ -1600,7 +1582,7 @@
           "text-halo-color": "#fff",
           "text-halo-width": 2
         },
-        "source": "protonmaps",
+        "source": "protomaps",
         "source-layer": "places",
         "type": "symbol"
       }
