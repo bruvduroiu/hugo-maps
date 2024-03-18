@@ -5,8 +5,12 @@
       "mapbox:autocomposite": false,
       "mapbox:type": "template",
       "openmaptiles:mapbox:owner": "protomaps",
-      "openmaptiles:mapbox:source:url": "mapbox://openmaptiles.4qljc88t",
       "openmaptiles:version": "3.x"
+    },
+    "sources": {
+      "protomaps": {
+	"type": "vector"
+      }
     },
     "layers": [
       {
