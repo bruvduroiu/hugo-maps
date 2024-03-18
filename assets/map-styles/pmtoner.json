@@ -321,19 +321,19 @@
         "type": "line"
       },
       {
-        "filter": [
-          "all",
-          [
-            "==",
-            "$type",
-            "Polygon"
-          ],
-          [
-            "==",
-            "brunnel",
-            "bridge"
-          ]
-        ],
+            "filter": [
+                "all",
+                [
+                    ">",
+                    "pmap:level",
+                    0
+                ],
+                [
+                    "==",
+                    "pmap:kind",
+                    "minor_road"
+                ]
+            ],
         "id": "road_area_bridge",
         "layout": {
           "visibility": "visible"
@@ -345,7 +345,7 @@
           "fill-opacity": 1
         },
         "source": "protomaps",
-        "source-layer": "transportation",
+        "source-layer": "roads",
         "type": "fill"
       },
       {
