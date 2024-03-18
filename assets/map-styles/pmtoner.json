@@ -1242,20 +1242,11 @@
         "type": "symbol"
       },
       {
-        "filter": [
-          "all",
-          [
-            "==",
-            "$type",
-            "Point"
-          ],
-          [
-            "in",
-            "class",
-            "village",
-            "hamlet"
-          ]
-        ],
+            "filter": [
+                "==",
+                "pmap:kind",
+                "locality"
+            ],
         "id": "place_label_village",
         "layout": {
           "text-anchor": "center",
@@ -1299,23 +1290,15 @@
           "text-halo-width": 2
         },
         "source": "protomaps",
-        "source-layer": "place",
+        "source-layer": "places",
         "type": "symbol"
       },
       {
-        "filter": [
-          "all",
-          [
-            "==",
-            "$type",
-            "Point"
-          ],
-          [
-            "==",
-            "class",
-            "city"
-          ]
-        ],
+            "filter": [
+                "==",
+                "pmap:kind",
+                "locality"
+            ],
         "id": "place_label_city",
         "layout": {
           "icon-anchor": "center",
@@ -1372,23 +1355,15 @@
           "text-halo-width": 2
         },
         "source": "protomaps",
-        "source-layer": "place",
+        "source-layer": "places",
         "type": "symbol"
       },
       {
-        "filter": [
-          "all",
-          [
-            "==",
-            "$type",
-            "Point"
-          ],
-          [
-            "==",
-            "class",
-            "town"
-          ]
-        ],
+            "filter": [
+                "==",
+                "pmap:kind",
+                "locality"
+            ],
         "id": "place_label_town",
         "layout": {
           "icon-anchor": "center",
@@ -1437,18 +1412,15 @@
           "text-halo-width": 2
         },
         "source": "protomaps",
-        "source-layer": "place",
+        "source-layer": "places",
         "type": "symbol"
       },
       {
-        "filter": [
-          "all",
-          [
-            "==",
-            "class",
-            "state"
-          ]
-        ],
+            "filter": [
+                "==",
+                "pmap:kind",
+                "region"
+            ],
         "id": "place_state-label",
         "layout": {
           "text-field": "{name:latin} {name:nonlatin}",
@@ -1468,15 +1440,15 @@
           "text-color": "rgba(0, 0, 0, 1)"
         },
         "source": "protomaps",
-        "source-layer": "place",
+        "source-layer": "places",
         "type": "symbol"
       },
       {
-        "filter": [
-          "==",
-          "class",
-          "country"
-        ],
+            "filter": [
+                "==",
+                "pmap:kind",
+                "country"
+            ],
         "id": "place_label_country",
         "layout": {
           "text-allow-overlap": false,
@@ -1527,7 +1499,7 @@
           "text-halo-width": 2
         },
         "source": "protomaps",
-        "source-layer": "place",
+        "source-layer": "places",
         "type": "symbol"
       },
       {
@@ -1566,7 +1538,7 @@
           "text-halo-width": 2
         },
         "source": "protomaps",
-        "source-layer": "place",
+        "source-layer": "places",
         "type": "symbol"
       }
     ],
