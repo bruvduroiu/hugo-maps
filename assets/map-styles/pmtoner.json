@@ -1,6 +1,6 @@
 {
     "version": 8,
-    "name": "Toner",
+    "name": "PMToner",
     "metadata": {
       "mapbox:autocomposite": false,
       "mapbox:type": "template",
@@ -1605,6 +1605,6 @@
         "type": "symbol"
       }
     ],
-    "glyphs": "https://protomaps.github.io/basemaps-assets/fonts/{fontstack}/{range}.pbf"
+    "glyphs": "https://protomaps.github.io/basemaps-assets/fonts/{fontstack}/{range}.pbf",
     "sprite": "https://openmaptiles.github.io/maptiler-toner-gl-style/sprite"
   }
