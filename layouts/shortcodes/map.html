@@ -84,7 +84,11 @@ $newtile.Permalink -}} {{- end -}} {{- end -}} {{- end -}} {{- end -}} {{- end
       protocol.add(p);
       let map = new maplibregl.Map({
               container: 'map-{{- $mapname -}}',
+       {{ if (and $mapparams.center_lng $mapparams.center_lat )-}}
+       center: [{{- $mapparams.center_lng -}}, {{- $mapparams.center_lat -}}],
+       {{- else -}}
               center:  {{- $mapparams.center -}},
+       {{- end -}}
               minZoom: {{- $mapparams.minZoom -}},
               maxZoom: {{- $mapparams.maxZoom -}},
               zoom: {{- $mapparams.zoom -}},
@@ -106,12 +110,19 @@ $newtile.Permalink -}} {{- end -}} {{- end -}} {{- end -}} {{- end -}} {{- end
           {{ end }}
 
           // add markers if any
+   {{ if $mapparams.marker }}
+              new maplibregl.Marker()
+    .setLngLat([{{- $mapparams.marker_lng -}}, {{- $mapparams.marker_lat -}}])
+                  .setPopup(new maplibregl.Popup().setHTML("{{- .marker_text -}}"))
+                  .addTo(map);
+   {{- else -}}
           {{ range $mapparams.markers -}}
               new maplibregl.Marker()
                   .setLngLat({{- .location -}})
                   .setPopup(new maplibregl.Popup().setHTML("{{- .text -}}"))
                   .addTo(map);
           {{- end -}}
+   {{- end -}}
 
           // set feature state for each feature
           map.on('data', function (e) {
