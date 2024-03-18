@@ -84,10 +84,14 @@ $newtile.Permalink -}} {{- end -}} {{- end -}} {{- end -}} {{- end -}} {{- end
       protocol.add(p);
       let map = new maplibregl.Map({
               container: 'map-{{- $mapname -}}',
-              center: [{{- .Get "lon" -}}, {{- .Get "lat" -}}],
+       {{ if (and (.Get "lon") (.Get "lat")) -}}
+       center: [.Get "lon", .Get "lat"],
+       {{- else -}}
+              center:  {{- $mapparams.center -}},
+       {{- end -}}
               minZoom: {{- $mapparams.minZoom -}},
               maxZoom: {{- $mapparams.maxZoom -}},
-              zoom: {{- .Get "zoom" -}},
+              zoom: {{- $mapparams.zoom -}},
               bearing: {{- $mapparams.bearing -}},
               minPitch: {{- $mapparams.minPitch -}},
               maxPitch: {{- $mapparams.maxPitch -}},
